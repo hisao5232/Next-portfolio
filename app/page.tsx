@@ -1,74 +1,110 @@
-import Image from 'next/image';
-
+/**
+ * エラー解消版: next/image の解決エラーを避けるため標準の img タグを使用します。
+ * 外部CSSに依存せず、100%確実にアニメーションを動作させるため
+ * インラインで <style> タグを定義して @keyframes を注入しています。
+ * 背景画像として public/hero.webp を使用するように設定しました。
+ */
 export default function Home() {
   return (
     <div className="relative">
+      {/* 確実にアニメーションを動かすためのCSS注入 */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes fadeUpIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-direct {
+          animation: fadeUpIn 0.8s ease-out forwards !important;
+        }
+        .delay-1 { animation-delay: 0.2s !important; }
+        .delay-2 { animation-delay: 0.4s !important; }
+      `}} />
+
       {/* ヒーローセクション */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden bg-slate-900">
-        {/* 背景画像（ここに好きな画像を配置してください。パスは public/hero.jpg 等） */}
-        {/* 画像をまだ用意していない場合は、この div がグレーのプレースホルダーになります */}
-        <div className="absolute inset-0 z-0 opacity-60">
-          {/* 画像がある場合は以下をコメントアウト解除して使用してください */}
-          <Image 
+      <section className="relative w-full h-[75vh] md:h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950">
+        {/* 背景画像エリア - 明るさを調整 */}
+        <div className="absolute inset-0 z-0 opacity-70"> {/* opacityを50から70に上げて画像を明るく */}
+          <img 
             src="/hero.webp" 
             alt="Hero Image" 
-            fill 
-            className="object-cover"
-            priority
-          /> 
-          <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-            <span className="text-slate-500 text-sm">Recommended Size: 1920x1080 (Hero Image Placeholder)</span>
-          </div>
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          {/* グラデーションを薄くして画像のディテールを出しつつ、文字の視認性も維持 */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-transparent to-black/60"></div>
         </div>
 
-        {/* ヒーローコンテンツ */}
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-md">
-            Connecting <span className="text-amber-500">Repair</span> and <span className="text-amber-500">Code</span>
+        <div className="relative z-10 text-center px-4 max-w-5xl">
+          {/* タイトル: styleで初期状態を透明にし、CSSクラスで動かす */}
+          <h1 
+            className="animate-direct text-5xl font-black tracking-tighter text-white sm:text-8xl mb-6"
+            style={{ opacity: 0 }}
+          >
+            Connecting <br className="sm:hidden" />
+            <span className="text-amber-500 drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]">Repair</span>
+            {" "}and{" "}
+            <span className="text-amber-500 drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]">Code</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-200 drop-shadow-sm">
+          
+          {/* サブテキスト */}
+          <p 
+            className="animate-direct delay-1 mx-auto mt-6 max-w-2xl text-lg md:text-xl leading-8 text-slate-100 font-bold drop-shadow-md"
+            style={{ opacity: 0 }}
+          >
             重機修理エンジニアからプログラミングの世界へ。<br />
             現場の課題を技術で解決する、新しいポートフォリオサイト。
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+
+          {/* ボタン */}
+          <div 
+            className="animate-direct delay-2 mt-12 flex items-center justify-center gap-x-6"
+            style={{ opacity: 0 }}
+          >
             <a
               href="#"
-              className="rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-slate-900 shadow-xl hover:bg-amber-400 transition-all"
+              className="group relative rounded-full bg-amber-500 px-12 py-4 text-sm font-bold text-slate-950 shadow-2xl hover:bg-amber-400 hover:scale-105 transition-all duration-300 overflow-hidden"
             >
-              View Projects
+              <span className="relative z-10 uppercase tracking-widest">View Projects</span>
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700"></div>
             </a>
           </div>
         </div>
+
+        {/* 下部への繋ぎのグラデーション */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
       {/* 特徴セクション */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-32 relative z-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-            {/* 特徴 1 */}
-            <div className="border-l-4 border-amber-500 pl-6 py-4 bg-slate-50 transition-all hover:bg-slate-100">
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Hard Skill</h3>
-              <p className="mt-2 text-amber-600 font-bold text-sm italic">Repair Engineer Specialist</p>
-              <p className="mt-2 text-base text-slate-700 leading-relaxed">
-                建設機械の修理で培った、物理的・論理的な問題解決能力。現場での実戦経験をエンジニアリングに。
+            <div className="group border-l-4 border-amber-500 pl-8 py-8 bg-slate-50 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 text-slate-900">
+              <h3 className="text-2xl font-black uppercase tracking-tight group-hover:text-amber-600 transition-colors">Hard Skill</h3>
+              <p className="mt-2 text-amber-600 font-bold text-xs tracking-widest uppercase italic">Repair Specialist</p>
+              <p className="mt-6 text-base text-slate-700 leading-relaxed font-medium">
+                建設機械の修理で培った、物理的・論理的な問題解決能力。現場での実戦経験をエンジニアリングの土台に。
               </p>
             </div>
 
-            {/* 特徴 2 */}
-            <div className="border-l-4 border-amber-500 pl-6 py-4 bg-slate-50 transition-all hover:bg-slate-100">
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">IT Strategy</h3>
-              <p className="mt-2 text-amber-600 font-bold text-sm italic">Next.js & Python Integration</p>
-              <p className="mt-2 text-base text-slate-700 leading-relaxed">
-                Pythonによる業務自動化から、Next.jsを用いたモダンなWebアプリ開発まで、多角的な解決策を提示。
+            <div className="group border-l-4 border-amber-500 pl-8 py-8 bg-slate-50 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 text-slate-900">
+              <h3 className="text-2xl font-black uppercase tracking-tight group-hover:text-amber-600 transition-colors">IT Strategy</h3>
+              <p className="mt-2 text-amber-600 font-bold text-xs tracking-widest uppercase italic">Logic & Code</p>
+              <p className="mt-6 text-base text-slate-700 leading-relaxed font-medium">
+                Pythonによる業務自動化から、Next.jsを用いたモダンなWebアプリ開発まで、現場視点の解決策を提示。
               </p>
             </div>
 
-            {/* 特徴 3 */}
-            <div className="border-l-4 border-amber-500 pl-6 py-4 bg-slate-50 transition-all hover:bg-slate-100">
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Lifestyle</h3>
-              <p className="mt-2 text-amber-600 font-bold text-sm italic">Football & Fitness</p>
-              <p className="mt-2 text-base text-slate-700 leading-relaxed">
-                青山学院理工学部卒の理論的思考と、サッカー・筋トレで磨いた持久力。攻守にわたる粘り強さ。
+            <div className="group border-l-4 border-amber-500 pl-8 py-8 bg-slate-50 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 text-slate-900">
+              <h3 className="text-2xl font-black uppercase tracking-tight group-hover:text-amber-600 transition-colors">Lifestyle</h3>
+              <p className="mt-2 text-amber-600 font-bold text-xs tracking-widest uppercase italic">Football & Fitness</p>
+              <p className="mt-6 text-base text-slate-700 leading-relaxed font-medium">
+                青山学院理工学部卒の知性と、サッカーで鍛えた持久力。困難なバグや課題にも粘り強く立ち向かいます。
               </p>
             </div>
           </div>
