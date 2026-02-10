@@ -1,9 +1,3 @@
-/**
- * エラー解消版: next/image の解決エラーを避けるため標準の img タグを使用します。
- * 外部CSSに依存せず、100%確実にアニメーションを動作させるため
- * インラインで <style> タグを定義して @keyframes を注入しています。
- * 背景画像として public/hero.webp を使用するように設定しました。
- */
 export default function Home() {
   return (
     <div className="relative">
@@ -57,8 +51,8 @@ export default function Home() {
             className="animate-direct delay-1 mx-auto mt-6 max-w-2xl text-lg md:text-xl leading-8 text-slate-100 font-bold drop-shadow-md"
             style={{ opacity: 0 }}
           >
-            重機修理エンジニアからプログラミングの世界へ。<br />
-            現場の課題を技術で解決する、新しいポートフォリオサイト。
+            建設機械エンジニアからプログラミングの世界へ。<br />
+            現場の課題を技術で解決する、ポートフォリオサイト。
           </p>
 
           {/* ボタン */}
@@ -67,7 +61,7 @@ export default function Home() {
             style={{ opacity: 0 }}
           >
             <a
-              href="#"
+              href="/projects"
               className="group relative rounded-full bg-amber-500 px-12 py-4 text-sm font-bold text-slate-950 shadow-2xl hover:bg-amber-400 hover:scale-105 transition-all duration-300 overflow-hidden"
             >
               <span className="relative z-10 uppercase tracking-widest">View Projects</span>
@@ -96,7 +90,7 @@ export default function Home() {
               <h3 className="text-2xl font-black uppercase tracking-tight group-hover:text-amber-600 transition-colors">IT Strategy</h3>
               <p className="mt-2 text-amber-600 font-bold text-xs tracking-widest uppercase italic">Logic & Code</p>
               <p className="mt-6 text-base text-slate-700 leading-relaxed font-medium">
-                Pythonによる業務自動化から、Next.jsを用いたモダンなWebアプリ開発まで、現場視点の解決策を提示。
+                Pythonによる業務自動化から、Javascript、Next.jsを用いたモダンなWebアプリ開発まで、現場視点の解決策を提示。
               </p>
             </div>
 
@@ -104,7 +98,7 @@ export default function Home() {
               <h3 className="text-2xl font-black uppercase tracking-tight group-hover:text-amber-600 transition-colors">Lifestyle</h3>
               <p className="mt-2 text-amber-600 font-bold text-xs tracking-widest uppercase italic">Football & Fitness</p>
               <p className="mt-6 text-base text-slate-700 leading-relaxed font-medium">
-                青山学院理工学部卒の知性と、サッカーで鍛えた持久力。困難なバグや課題にも粘り強く立ち向かいます。
+                理工学部卒の論理的思考と、趣味のサッカー、筋トレで鍛えた持久力。困難なバグや課題にも粘り強く立ち向かいます。
               </p>
             </div>
           </div>
