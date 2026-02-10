@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "hisao5232 Portfolio",
+  title: "Go-out-into-PG-World",
   description: "重機修理エンジニア × プログラミング。現場の課題を技術で解決するポートフォリオ。",
 };
 
