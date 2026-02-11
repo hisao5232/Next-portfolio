@@ -74,6 +74,47 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
+{/* Zenn ブログセクション */}
+<section className="py-20 bg-white">
+  <div className="max-w-4xl mx-auto px-6">
+    <div className="group relative bg-slate-50 rounded-[2.5rem] p-8 md:p-12 border border-slate-200 hover:border-amber-500 transition-all duration-500 shadow-sm hover:shadow-2xl overflow-hidden">
+      
+      {/* 背景の装飾アクセント */}
+      <div className="absolute -top-24 -right-24 w-64 h-64 bg-amber-500/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+
+      <div className="relative flex flex-col md:flex-row items-center gap-8">
+        {/* Zenn ロゴ・アイコンエリア */}
+        <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:rotate-6 transition-transform">
+          <span className="text-white font-black text-3xl">Z</span>
+        </div>
+
+        {/* テキストコンテンツ */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter mb-3">
+            Technical <span className="text-blue-500">Blog</span> on Zenn
+          </h2>
+          <p className="text-slate-600 leading-relaxed mb-6 font-medium">
+            重機修理の現場で得た知見や、Python・Next.jsの学習記録をZennにて発信しています。
+            「現場×IT」の試行錯誤を言語化して記録しています。
+          </p>
+          
+          <a 
+            href="https://zenn.dev/hisao5232" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-blue-500 hover:scale-105 transition-all no-underline"
+          >
+            <span>Read on Zenn</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* 特徴セクション */}
       <section className="bg-white py-32 relative z-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
