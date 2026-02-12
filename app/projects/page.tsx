@@ -102,9 +102,12 @@ export default function Projects() {
                     </svg>
                     GitHub Code
                   </a>
-                  <button className="text-amber-500 font-black text-[10px] uppercase tracking-tighter cursor-pointer hover:opacity-70 transition-opacity">
-                    Read More
-                  </button>
+                    <a 
+                      href={`/projects/${project.id}`} 
+                      className="text-amber-500 font-black text-[10px] uppercase tracking-tighter cursor-pointer hover:opacity-70 transition-all no-underline"
+                    >
+                      Read More →
+                  </a>
                 </div>
               </div>
             </div>
