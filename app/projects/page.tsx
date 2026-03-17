@@ -16,11 +16,11 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Portfolio Website v1",
-      description: "Next.jsとTailwind CSS v4を使用したモダンなポートフォリオ。Cloudflare Pagesで公開。",
-      tech: ["Next.js", "React", "Tailwind CSS"],
-      github: "https://github.com/hisao5232/my-app",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      title: "Market Radar AI v1.2",
+      description: "Llama 3.3とGroq APIを活用した日本株ニュース分析システム。PR Timesから重要情報を自動抽出し銘柄を特定。",
+      tech: ["Python", "Next.js", "PostgreSQL", "Groq", "Docker"],
+      github: "https://github.com/hisao5232/market-radar",
+      image: "https://images.unsplash.com/photo-1611974714652-520e7df6554b?auto=format&fit=crop&q=80&w=800", // 証券・チャート系の画像
     },
     {
       id: 3,
