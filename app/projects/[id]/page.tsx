@@ -13,12 +13,17 @@ const projects = [
   },
   {
     id: 2,
-    title: "Portfolio Website v1",
-    fullDescription: "Next.jsとTailwind CSS v4を使用したモダンなポートフォリオです。Cloudflare Pagesの自動デプロイを利用し、パフォーマンスと保守性を両立させています。エンジニアとしてのスキルと、修理現場でのアイデンティティを融合させたデザインを目指しました。",
-    tech: ["Next.js", "React", "Tailwind CSS v4", "Lucide React"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    features: ["レスポンシブデザイン", "Tailwind v4 による高速なビルド", "Cloudflare Pages への自動デプロイ"],
-    background: "自分自身の活動を一覧化し、エンジニアとしての『名刺』代わりになる場所を作るために制作しました。"
+    title: "Market Radar AI v1.2",
+    fullDescription: "Llama 3.3 (Groq API) を活用し、膨大なプレスリリースから日本株市場に影響を与える重要ニュースをリアルタイムで抽出・分析するシステムです。単なる要約に留まらず、ニュースに関連する上場企業を特定し、銘柄コード（ティッカー）を自動付与してデータベース化します。自然な日本語での分析と、証券データとの正確な紐付けを両立させました。",
+    tech: ["Next.js", "Python", "PostgreSQL", "Groq AI", "Docker"],
+    image: "https://images.unsplash.com/photo-1611974714652-520e7df6554b?auto=format&fit=crop&q=80&w=1200",
+    features: [
+      "Llama 3.3 による高精度なニュース分析と要約",
+      "独自の銘柄照合アルゴリズムによるティッカー自動付与",
+      "Docker Compose によるフルスタックなインフラ構成",
+      "Traefik を利用したリバースプロキシとSSL自動更新"
+    ],
+    background: "副業でのプログラミング学習と、自身の投資活動を効率化するために開発。情報の取捨選択という課題をAIの力で解決することを目指しました。"
   },
   {
     id: 3,
