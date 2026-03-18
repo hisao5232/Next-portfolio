@@ -16,7 +16,7 @@ const projects = [
     title: "Market Radar AI v1.2",
     fullDescription: "Llama 3.3 (Groq API) を活用し、膨大なプレスリリースから日本株市場に影響を与える重要ニュースをリアルタイムで抽出・分析するシステムです。単なる要約に留まらず、ニュースに関連する上場企業を特定し、銘柄コード（ティッカー）を自動付与してデータベース化します。自然な日本語での分析と、証券データとの正確な紐付けを両立させました。",
     tech: ["Next.js", "Python", "PostgreSQL", "Groq AI", "Docker"],
-    image: "https://images.unsplash.com/photo-1611974714652-520e7df6554b?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/market-radar-sh.webp",
     features: [
       "Llama 3.3 による高精度なニュース分析と要約",
       "独自の銘柄照合アルゴリズムによるティッカー自動付与",

@@ -20,7 +20,7 @@ export default function Projects() {
       description: "Llama 3.3とGroq APIを活用した日本株ニュース分析システム。PR Timesから重要情報を自動抽出し銘柄を特定。",
       tech: ["Python", "Next.js", "PostgreSQL", "Groq", "Docker"],
       github: "https://github.com/hisao5232/market-radar",
-      image: "https://images.unsplash.com/photo-1611974714652-520e7df6554b?auto=format&fit=crop&q=80&w=800", // 証券・チャート系の画像
+      image: "/images/market-radar-sh.webp",
     },
     {
       id: 3,
