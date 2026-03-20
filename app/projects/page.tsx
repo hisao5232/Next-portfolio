@@ -24,11 +24,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Inventory Logic System",
-      description: "修理部品の在庫管理を論理的に最適化するアルゴリズム。欠品リスクの最小化を実現。",
-      tech: ["Python", "SQLite", "Ubuntu"],
-      github: "https://github.com/hisao5232",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
+      title: "Heavy Machinary Rental System",
+      description: "重機レンタル予約・在庫管理システム。現場住所や回送依頼を含む複雑な予約フローをデジタル化し、エンジニア視点でのマッチング効率を向上。",
+      tech: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cloudflare"],
+      github: "https://github.com/hisao5232/rental-app", // 必要に応じてリポジトリ名を追加してください
+      image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=800", // 重機のプロフェッショナルな画像に変更
     },
   ];
 

@@ -26,14 +26,19 @@ const projects = [
     background: "副業でのプログラミング学習と、自身の投資活動を効率化するために開発。情報の取捨選択という課題をAIの力で解決することを目指しました。"
   },
   {
-    id: 3,
-    title: "Inventory Logic System",
-    fullDescription: "修理部品の在庫管理を論理的に最適化するアルゴリズムです。過去の修理実績データから、よく使われる部品とそうでない部品を分類。欠品リスクを最小限に抑えつつ、過剰在庫によるコストを削減します。",
-    tech: ["Python", "SQLite", "Ubuntu"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
-    features: ["夢予測アルゴリズム", "SQLiteによる高速な検索", "CLIベースの在庫管理インターフェース"],
-    background: "現場で必要な部品が足りず修理が止まるストレスを解消するために開発しました。"
-  },
+  id: 3,
+  title: "Heavy Machinery Rental System",
+  fullDescription: "建設現場のニーズと重機の在庫を最適にマッチングさせる予約管理システムです。現場住所の入力や回送（運搬）依頼の有無など、建設業界特有の商習慣をフォームに落とし込み、電話やFAXに頼っていた予約フローをデジタル化。バックエンドにFastAPI、フロントエンドにNext.jsを採用し、高速でストレスのない操作感を実現しました。",
+  tech: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cloudflare"],
+  image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=1200",
+  features: [
+    "現場住所・回送依頼を含む高度な予約フォーム",
+    "管理者用ダンプ・バックホー等のカテゴリー別管理",
+    "JWT認証によるセキュアなログイン機能",
+    "Dockerによる一貫した開発・デプロイ環境"
+  ],
+  background: "修理エンジニアとして現場に携わる中で、重機の空き状況確認や手配の非効率さを痛感し、自ら解決するために開発をスタートしました。"
+}
 ];
 
 export async function generateStaticParams() {
