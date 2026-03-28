@@ -8,10 +8,10 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Construction Tech Automation",
-      description: "Pythonを用いた重機メンテナンスデータの自動解析ツール。現場の報告書作成時間を50%削減。",
-      tech: ["Python", "Pandas", "Openpyxl"],
-      github: "https://github.com/hisao5232",
+      title: "Repair-Timetable: 重機出張修理予約システム",
+      description: "建設機械の修理現場における予約管理と故障原因分析をデジタル化したフルスタックアプリ。カレンダーベースの工程管理と、データに基づいた故障傾向の可視化を実現。",
+      tech: ["Python (FastAPI)", "JavaScript", "PostgreSQL", "Cloudflare Pages", "Docker", "Tailwind CSS v4"],
+      github: "https://github.com/hisao5232/repair-time", // リポジトリ名に合わせて調整してください
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800",
     },
     {
