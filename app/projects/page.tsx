@@ -20,7 +20,7 @@ export default function Projects() {
       description: "Llama 3.3とGroq APIを活用した日本株ニュース分析システム。PR Timesから重要情報を自動抽出し銘柄を特定。",
       tech: ["Python", "Next.js", "PostgreSQL", "Groq", "Docker"],
       github: "https://github.com/hisao5232/market-radar",
-      image: "/images/market-radar-sh.webp",
+      image: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function Projects() {
       description: "重機レンタル予約・在庫管理システム。現場住所や回送依頼を含む複雑な予約フローをデジタル化し、エンジニア視点でのマッチング効率を向上。",
       tech: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cloudflare"],
       github: "https://github.com/hisao5232/rental-app", // 必要に応じてリポジトリ名を追加してください
-      image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=800", // 重機のプロフェッショナルな画像に変更
+      image: "https://images.unsplash.com/photo-1628158088791-89567a8e84ec?w=600&auto=format&fit=crop&q=80&w=800",
     },
   ];
 
