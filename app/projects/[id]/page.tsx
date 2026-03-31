@@ -39,8 +39,8 @@ const projects = [
     // ご指定いただいたUnsplashの株価チャート画像
     image: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?auto=format&fit=crop&q=80&w=1200",
     subImages: [
-      {url: "https://images.unsplash.com/photo-1581092160204-cdcbce12e181?auto=format&fit=crop&q=80&w=800", caption: "AI分析ログ"},
-      {url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800", caption: "ダッシュボード表示"},
+      {url: "/images/market-radar-sub-1.webp", caption: "ダッシュボード表示"},
+      {url: "/images/market-radar-sub-2.webp", caption: "AI分析結果の詳細ビュー"},
     ],
     features: [
       "Llama 3.3 による高精度なニュース分析と要約",
@@ -56,11 +56,13 @@ AIによる客観的な分析データを活用し、時短かつ精度の高い
   {
     id: 3,
     title: "Heavy Machinery Rental System",
-    fullDescription: "建設現場のニーズと重機の在庫を最適にマッチングさせる予約管理システムです...",
+    fullDescription: "建設現場のニーズと在庫を最適にマッチングさせる予約管理プラットフォームです。カスタマーからの予約受付を完全にオンライン化し、現場担当者がスマホから直接注文・返却入力を行える仕組みを構築しました。事務員の転記作業や電話応対の負担を大幅に軽減するだけでなく、稼働状況から『次に点検すべき機械の優先順位』を自動で明確化し、メンテナンス業務の効率化と機材の安全稼働をサポートします。",
     tech: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cloudflare"],
     image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=1200",
     subImages: [
-      {url: "https://images.unsplash.com/photo-1581092160204-cdcbce12e181?auto=format&fit=crop&q=80&w=800", caption: "予約フォーム"},
+      {url: "/images/rental-sub-1.webp", caption: "管理者メニュー"},
+      {url: "/images/rental-sub-2.webp", caption: "カスタマー側の予約画面"},
+      {url: "/images/rental-sub-3.webp", caption: "管理者側の在庫管理画面"},
     ],
     features: [
       "現場住所・回送依頼を含む高度な予約フォーム",
@@ -68,7 +70,7 @@ AIによる客観的な分析データを活用し、時短かつ精度の高い
       "JWT認証によるセキュアなログイン機能",
       "Dockerによる一貫した開発・デプロイ環境"
     ],
-    background: "修理エンジニアとして現場に携わる中で、重機手配の非効率さを痛感し開発。"
+    background: "修理エンジニアとして現場に携わる中で、重機手配のアナログな運用とメンテナンス管理の非効率さを痛感し、その解決のために開発しました。"
   }
 ];
 
